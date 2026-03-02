@@ -1,0 +1,3 @@
+Vyřešit main_container backgroudn (ty rozbité bricky) aby fungovaly i na telefon, předělat tuto fotku do .svg ne v png
+vyřešit javascript na vytváření HTML kódu na vícero stránek
+Nápad: vytvořit jeden SCSS kód pro více HTML kódů (na footer a header)

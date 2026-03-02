@@ -1,0 +1,344 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "Roboto", "Aldrich";
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-image: url("img/binder-photos/koupelny/koupelna_6_po.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.navbar_main {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 10px black;
+}
+.navbar_main .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar_main .navbar_left {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+.navbar_main .navbar_center {
+  display: none;
+}
+.navbar_main .navbar_right {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar_main #logo_img {
+  width: 75px;
+  max-width: 100px;
+  min-width: 50px;
+}
+.navbar_main p, .navbar_main a {
+  color: rgb(177, 43, 36);
+  font-size: 5vw;
+  font-family: "Aldrich", "Poppins", "Roboto";
+  text-align: left;
+}
+
+.headligns_center {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40%;
+}
+.headligns_center h1, .headligns_center h2 {
+  color: white;
+  font-family: "Aldrich", "Poppins", "Roboto";
+  text-align: center;
+}
+.headligns_center h1 {
+  color: rgb(177, 43, 36);
+  text-shadow: 2px 2px 5px rgb(130, 31, 25);
+  font-size: 14vw;
+}
+.headligns_center h2 {
+  opacity: 1;
+  margin-bottom: 10px;
+  font-size: 10vw;
+}
+
+#custom_text {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 3rem;
+}
+#custom_text .important_text {
+  color: rgb(177, 43, 36);
+  font-weight: 900;
+}
+
+main #main_container {
+  width: 100%;
+  padding: 30px 20px;
+  text-align: center;
+  color: black;
+}
+main #main_container #main_container1 {
+  margin-bottom: 30px;
+}
+main #main_container #main_container2 ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+main #main_container #main_containers {
+  background-size: contain, contain;
+  background-position: left center, right center;
+  background-repeat: no-repeat, no-repeat;
+  min-width: 100px;
+  position: relative; /* Add this to position the overlay */
+}
+main #main_container #main_containers::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* This is the transparent overlay. Adjust the '0.5' value to change the transparency. */
+  z-index: -1; /* Place the overlay behind the content */
+}
+main #main_container .services_list {
+  list-style: none;
+  text-align: center;
+}
+main #main_container .services_list li {
+  margin-bottom: 10px;
+}
+main #main_container .services_list li p {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+main #main_container ul li {
+  list-style: none;
+}
+main #main_container h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+main .photos_container {
+  align-items: center;
+  text-align: center;
+}
+main .photos_container #photo_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+main .photos_container #photo_grid img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  display: block;
+}
+main .photos_container #photo_grid h4 {
+  font-size: 1.2rem;
+}
+main .photos_container h3 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+main .photos_container .photo_item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+main .photos_container .photo_item img {
+  filter: brightness(0.5);
+}
+main .photos_container .photo_item .img_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  pointer-events: none;
+  text-shadow: 2px 2px 10px black;
+}
+
+#contact {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+#contact h3 {
+  font-size: 3rem;
+}
+#contact li {
+  list-style: none;
+}
+#contact p {
+  font-size: 1.2rem;
+}
+#contact p .weighted {
+  font-weight: 600;
+}
+
+footer .container {
+  min-height: 10vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(177, 43, 36);
+  padding: 20px;
+}
+footer .container #footer_img {
+  width: 75px;
+  max-width: 100px;
+  min-width: 50px;
+}
+footer .container ul li {
+  list-style: none;
+  font-size: 1rem;
+}
+
+#scroll-up-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(177, 43, 36);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 1;
+  opacity: 0.9;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 900;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+#scroll-up-btn:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+/* --- Desktop Styles --- */
+@media (min-width: 768px) {
+  .container {
+    max-width: 1200px;
+    padding: 0;
+  }
+  .navbar_main .container {
+    padding: 20px;
+  }
+  .navbar_main .navbar_left {
+    flex-grow: 0;
+    align-items: center;
+  }
+  .navbar_main .navbar_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    list-style: none;
+    gap: 20px;
+  }
+  .navbar_main .navbar_center li a {
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+  }
+  .navbar_main .navbar_right {
+    flex-grow: 0;
+    align-items: center;
+  }
+  .navbar_main .navbar_right p, .navbar_main .navbar_right a {
+    color: rgb(177, 43, 36);
+    font-size: 1.8rem;
+  }
+  .headligns_center {
+    margin-top: 10%;
+  }
+  .headligns_center h1 {
+    font-size: 10vw;
+  }
+  .headligns_center h2 {
+    font-size: 6vw;
+  }
+  #custom_text {
+    font-size: 4rem;
+  }
+  #main_container #main_containers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background-image: none;
+  }
+  #main_container h3 {
+    font-size: 3rem;
+  }
+  .photos_container h3 {
+    font-size: 4rem;
+  }
+  #photo_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  footer .container {
+    justify-content: center;
+    gap: 100px;
+    padding: 20px;
+    max-width: 100%;
+  }
+  .img_text p {
+    font-size: 5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
